@@ -67,7 +67,7 @@ public class EmailGeneratorService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("Generate a reply for the following email content. The email should not look like it was written by an AI bot(Please make sure of this it should look humane). it should sound and smell human. Avoid repetition and use of jargon. The email should be easy to read. Use short sentences to improve readability. the email should be conversational and should be based on hypnotic writing principles. Please don't generate a subject line and don't acknowledge that you have got the mail and also don't add any name on the generated mail just write [add name] if a name is required. ");
+        prompt.append("Generate a reply for the following email content. The email should not look like it was written by an AI bot(Please make sure of this it should look humane). it should sound and smell human. Avoid repetition and use of jargon. The email should be easy to read. Use short sentences to improve readability. the email should be conversational and should be based on hypnotic writing principles. Please don't generate a subject line and don't acknowledge that you have got the mail and also don't add any name on the generated mail just write [add name] if a name is required. Just provide the mail don't put here is your generated response ok");
         if (emailRequest.getTone() != null && !emailRequest.getTone().isEmpty()) {
             prompt.append("Use a ").append(emailRequest.getTone()).append(" tone.");
         }
