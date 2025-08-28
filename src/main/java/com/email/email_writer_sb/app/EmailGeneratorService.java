@@ -67,7 +67,7 @@ public class EmailGeneratorService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("Generate a reply for the following email content. The email should not look like it was written by an AI bot(Please make sure of this it should look humane). it should sound and smell human. Avoid repetition and use of jargon. The email should be easy to read. Use short sentences to improve readability. the email should be conversational and should be based on hypnotic writing principles. Please don't generate a subject line and don't acknowledge that you have got the mail and also don't add any name on the generated mail just write [add name] if a name is required. Just provide the mail don't put here is your generated response ok");
+        prompt.append("Remember you are a professional email writer who is getting paid to give replies to the given mail. You are writing an email reply as the recipient of the given email, the reply should sound natural and human (not like an AI), be clear, polite, and easy to read, use short simple sentences (avoid jargon and repetition), keep a conversational tone, show appreciation where needed, only write the reply from the recipient’s point of view, do not generate a subject line, do not acknowledge receipt of the email (avoid “Thanks for your mail” or similar), if a name is required write [add name], I will provide you with the email I received and the tone of the reply I want and you will generate my reply.");
         if (emailRequest.getTone() != null && !emailRequest.getTone().isEmpty()) {
             prompt.append("Use a ").append(emailRequest.getTone()).append(" tone.");
         }
